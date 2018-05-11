@@ -1,0 +1,411 @@
+/*estilos.css*/
+
+html, body, div, span, applet, object, iframe,
+h1,h2,h3 h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big,
+cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,
+var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,
+figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section 
+{
+display: block;
+}
+
+body {
+line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote,q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* BORDER BOX*/
+
+* {
+    box-sizing: border-box;
+}
+
+/*COMIENZO ESTILOS*/
+
+body{
+     font-family: 'Open Sans', sans-serif;
+    color: dimgray;
+}
+header{
+    background-color: #50b8c5;
+    width: 100%;
+    height: 100px;
+    position:fixed;
+    z-index: 1000;
+}
+/* ESTILOS MENU*/
+.menu-toggle {
+  width: 40px;
+  height: 30px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+}
+.menu-toggle.on .one {
+  -moz-transform: rotate(45deg) translate(7px, 7px);
+  -ms-transform: rotate(45deg) translate(7px, 7px);
+  -webkit-transform: rotate(45deg) translate(7px, 7px);
+  transform: rotate(45deg) translate(7px, 7px);
+}
+.menu-toggle.on .two {
+  opacity: 0;
+}
+.menu-toggle.on .three {
+  -moz-transform: rotate(-45deg) translate(8px, -10px);
+  -ms-transform: rotate(-45deg) translate(8px, -10px);
+  -webkit-transform: rotate(-45deg) translate(8px, -10px);
+  transform: rotate(-45deg) translate(8px, -10px);
+}
+
+.one,
+.two,
+.three {
+  width: 100%;
+  height: 5px;
+  background: white;
+  margin: 6px auto;
+  backface-visibility: hidden;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.menu{
+    display: flex;
+    margin: 4em auto;
+    flex-direction: column;
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+}
+
+.menu a{
+    display: block;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+.menu a:hover{
+    background-color: #5A6087;
+    font-size: 19px;
+}
+nav ul.hidden {
+  display: none;
+}
+.menu-section.on {
+  z-index: 15;
+  width: 100%;
+  height: 1000px;
+  display: block;
+  background-color: rgba(126, 134, 175, .9);
+  position: absolute;
+}
+
+
+
+.ima{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    width: 100%;
+}
+.fondo1{
+    background-image: url(Imagenes/computer.jpg);
+    background-attachment: fixed;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 900px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.circuloAzul{
+    width: 200px;
+    height: 200px;
+    background-color: #87cdd8;
+    border-radius: 50%;
+}
+.soyDg{
+    width: 100%;
+    height: 150px;  
+}
+.soyDg h1{
+    font-size: 100px;
+    text-align: center;
+    color: white;
+    font-family: 'PT Sans Caption', sans-serif;
+}
+.soyDg h2{
+    font-size: 80px;
+    text-align: center;
+    color: #d3dd76;
+    font-family:'Vibur', cursive;
+}
+/* ESTILOS CIRCULOS*/
+.caja4{
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+}
+.caja4 h2{
+    font-family: 'PT Sans Caption', sans-serif;
+    font-weight: 200;
+    font-size: 40px;
+}
+
+.circulos{
+    background-color: #7e86af;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+
+}
+.circulo{
+    width: 150px;
+    height: 150px;
+    border-radius: 50% 50%;
+    margin: 6%;
+    background-color: #c6ce66;
+}
+.circulo img{
+    width: 150px;
+    height: 150px;
+}
+.circulo:hover{
+    background-color: #616196;
+    transform: scale(1.1);
+    transition: transform .2s linear;
+}
+.circulo img{
+    transform: scale(1);
+}
+.circulo p{
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+    font-size: 20px;
+    font-family: 'PT Sans Caption', sans-serif;
+}
+
+
+/*ESTILOS IMAGENES*/
+.imagenes{
+    display: flex;
+    
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  
+}
+.cont-img{
+  position: relative;
+  width: 50%;
+  height: auto;
+
+}
+.img{
+    width: 100%;
+    min-width: 80%;
+    height: auto;
+}
+.image1{
+    position: relative;
+    width: 100%;
+	padding:0px 0px 68% 0px;
+}
+.image1 img{
+  display: block;
+    width: 100%;
+  position: absolute;
+  top: 0;
+  left:0;
+  transition: .5s left cubic-bezier(.64,.57,.67,1.53);
+}
+.image1:hover img{
+	left: 700px;
+}
+
+.image1{
+	position: relative;
+	width: 100%;
+    overflow: hidden;
+}
+
+.image1 figcaption{
+	position: absolute;
+    font-size: 30px;
+	top: 0;
+	left:0;
+	width:100%;
+	height:100%;
+	color:#666;
+	z-index:-1;
+    display: flex;
+	justify-content:center;
+	align-items: center;
+}
+
+.redesSociales{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+.behance{
+    background-image:url(Imagenes/behancedos.png);
+    display: block;
+    background-size:;
+    background-repeat: no-repeat;
+    width: 102px;
+    height: 102px;
+    background-position: 0 0;
+    margin: 20px;
+}
+.behance:hover{
+
+    background-position: 0 -102px;
+}
+.linkedin{
+     background-image:url(Imagenes/linkedindos.png);
+    display: block;
+    background-size:;
+    background-repeat: no-repeat;
+    width: 102px;
+    height: 102px;
+    background-position: 0 0;
+    margin: 20px;
+}
+.linkedin:hover{
+    background-position: 0 -102px;
+}
+.formulario{
+    background-image: url(Imagenes/Fondo2.png);
+    background-attachment: fixed;
+    background-color: #f5f5f5;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.formulario div{
+    margin-bottom: 2em;
+    width: 100%;
+}
+input{
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    width: 18em;
+}
+input,textarea:hover{
+    background-color: #dadad9;
+}
+textarea{
+    margin-top: 10px;
+    width: 100%;
+}
+
+.formulario div:nth-of-type(4){
+    margin-bottom: 0px;
+}
+.inputCirculo{
+    margin: auto;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    display: block;
+    color: #504d8d;
+}
+.inputCirculo:hover{
+    background-color: #c6ce61;
+    
+}
+footer{
+    background-color:#504d8d;
+    height: 80px;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (max-width: 600px){
+    .fondo1{
+    background-image: url(Imagenes/computer.jpg);
+    background-attachment: fixed;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 900px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cont-img{
+      position: relative;
+      width: 100%;
+      height: auto;
+}
+    .circulos{
+        padding: 40px;
+    }
+    .circulo{
+        margin: 39px;
+    }
+
+}
+
